@@ -1,8 +1,12 @@
 
 import {
-    IoCodeWorking,
-  
-  } from "react-icons/io5";
+  IoCodeWorking,
+  IoLogoGithub,
+  IoLogoYoutube,
+  IoLogoTwitter,
+  IoLogoLinkedin,
+  IoLogoWhatsapp,
+} from "react-icons/io5";
 
   
   export const Experience = [
@@ -53,4 +57,86 @@ import {
     },
   ];
   
- 
+  export const Projects = [
+    {
+      id: 1,
+      name: "Food Delivery",
+    //  imageSrc: ,
+      techs: "React Js, Redux, Material UI",
+      github: "#",
+    },
+    {
+      id: 2,
+      name: "Full Stack Social Media App ",
+     // imageSrc: ,
+      techs: "React Js, Sanity, Tailwind CSS",
+      github: "#",
+    },
+    {
+      id: 3,
+      name: "Travel Advisor",
+    //  imageSrc: ,
+      techs: "React Js, Chakra UI, Google API",
+      github: "#",
+    },
+    {
+      id: 4,
+      name: "Pintrest UI Clone 2.0 ",
+    //  imageSrc: ,
+      techs: "React Js,  Material UI",
+      github: "#",
+    },
+    {
+      id: 5,
+      name: "Own Video Blog",
+    //  imageSrc: ,
+      techs: "React Js, Chara UI, Firebase",
+      github: "#",
+    },
+    {
+      id: 6,
+      name: "Whatsapp UI Clone",
+    //  imageSrc: ,
+      techs: "NextJs, Firebase Auth",
+      github: "#",
+    },
+  ];
+  
+  export const SocialLinks = [
+    {
+      id: 1,
+      iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
+      name: "GitHub",
+      link: "#",
+    },
+    {
+      id: 1,
+      iconSrc: <IoLogoYoutube className="text-red-500 text-3xl cursor-pointer" />,
+      name: "YouTube",
+      link: "#",
+    },
+    {
+      id: 1,
+      iconSrc: (
+        <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
+      ),
+      name: "Twitter",
+      link: "#",
+    },
+    {
+      id: 1,
+      iconSrc: (
+        <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
+      ),
+      name: "LinkedIn",
+      link: "#",
+    },
+    {
+      id: 1,
+      iconSrc: (
+        <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
+      ),
+      name: "Whatsapp",
+      link: "#",
+    },
+  ];

@@ -16,7 +16,10 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-
+body,
+html{
+  scroll-behavior: smooth;
+}
 
 
 @tailwind base;
