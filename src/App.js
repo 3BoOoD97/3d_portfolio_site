@@ -2,15 +2,19 @@ import React, { Component }  from 'react';
 import Spline from '@splinetool/react-spline';
 import './App.css';
 import {IoMenu, IoLogoGithub} from 'react-icons/io5';
+
 import {useState} from 'react';
 import me from './img/me.jpg';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { Experience, Projects} from "./data";
+import { Experience, Projects, SocialLinks} from "./data";
+import { AnimatePresence, motion } from "framer-motion";
+import { type } from '@testing-library/user-event/dist/type';
 
 function App() {
   const [isActive, setIsActive] = React.useState(false);
   return (
+    <AnimatePresence initial={false}>
 
        <div className='flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20'>
        
@@ -35,13 +39,24 @@ function App() {
       Download
       </a>
       </div>
-      <div className='block md:hidden ml-auto cursor-pointer' onClick={() => setIsActive(!isActive)}
->
-        <IoMenu className='text-2xl text-textBase'/>
-      </div>
-      {isActive && (
-        <div className="p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex
-        flex-col items-center justify-evenly gap-6">
+    
+      <motion.div
+              whileTap={{ scale: 0.6 }}
+              className="block md:hidden  ml-auto cursor-pointer"
+              onClick={() => setIsActive(!isActive)}
+            >
+              <IoMenu className="text-2xl text-textBase " />
+            </motion.div>
+
+            {isActive && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1.1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                transition={{ delay: "0.1s", type: "spring" }}
+                className="p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6"
+              >
+    
 <a href="#home" className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 
         ease-in-out"
         onClick={()=>setIsActive(false)}>Home</a>
@@ -63,7 +78,7 @@ function App() {
         onClick={()=>setIsActive(false)}>
       Download
       </a>
-        </div>
+      </motion.div>      
       )}
       </div>
       </nav>
@@ -90,11 +105,11 @@ function App() {
 {/* Content Box*/}
             <div className='w-full h-420 flex flex-col items-center justify-center'>
               <p className='text-lg text-textBase text-center'>Hi I am Abod</p>
-              <button class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
+              <motion.button whileTap={{scale:0.8}} class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
                 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   Download
                 </span>
-              </button>
+              </motion.button>
             </div>
             </section>
 
@@ -147,9 +162,9 @@ function App() {
      </p>
 
      <a href={n.github}>
-       <div>
+       <motion.div whileTap={{scale:0.8}}>
          <IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
-       </div>
+       </motion.div>
      </a>
    </div>
  </div>
@@ -157,9 +172,30 @@ function App() {
 ))}
 
           </section>
+          {/* Contact*/}
+          <section id='contact' className='flex flex-col items-center justify-center w-full my-24'>
+<p className='text-2xl text-gray-400 capitalize'>Follow me on</p>
+<div className='flex items-center justify-center w-full my-4 flex-wrap gap-4'>
+{SocialLinks &&
+                SocialLinks.map((n) => (
+                  <motion.a
+                    whileTap={{ scale: 0.8 }}
+                    href={n.link}
+                    key={n.id}
+                    className="w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3"
+                  >
+                    {n.iconSrc}
+                    <p className="text-lg text-textBase">{n.name}</p>
+                  </motion.a>
+
+))}
+
+</div>
+            </section>
         </main>
     </div>
- 
+
+</AnimatePresence>
   );
 }
 
