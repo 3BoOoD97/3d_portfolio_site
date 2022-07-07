@@ -1,59 +1,47 @@
-
 import {
-  IoCodeWorking,
-  IoLogoGithub,
-  IoLogoYoutube,
-  IoLogoTwitter,
-  IoLogoLinkedin,
-  IoLogoWhatsapp,
-} from "react-icons/io5";
+    IoCodeWorking,
+    IoLogoGithub,
+    IoLogoYoutube,
+    IoLogoTwitter,
+    IoLogoLinkedin,
+    IoLogoWhatsapp,
+    IoLogoFacebook,
+    IoLogoDiscord,
+  } from "react-icons/io5";
+  import img1 from "./images/pizza.jpg";
+  import img2 from "./images/thumb-fullstack-socialmedia-app-react-sanity.png";
+  import img3 from "./images/store.jpg";
+  import img4 from "./images/portfolio.png";
+  import img5 from "./images/thumb-whatsappui-clone-nextjs.png";
+  import img6 from "./images/music.png";
 
-  
   export const Experience = [
     {
       id: 1,
-      date: "2016 - present",
+      date: "2021 - Present",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "IT Technician",
+      location: "Växjö, Sweden",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Creative Direction, Maintaining Networks, Testing, Troubleshooting, Supporting",
     },
     {
       id: 2,
-      date: "2014 - 2016",
+      date: "2020 - Present",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Freelancer",
+      location: "Växjö, Sweden",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Visual Design, User Experience, Project Management",
     },
     {
       id: 3,
-      date: "2012 - 2014",
+      date: "2018 - 2021",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "BSc Software Technology",
+      location: "Växjö, Sweden",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
-    },
-    {
-      id: 4,
-      date: "2011 - 2012",
-      iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
-      description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
-    },
-    {
-      id: 5,
-      date: "2010 - 2011",
-      iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
-      description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "",
     },
   ];
   
@@ -61,43 +49,43 @@ import {
     {
       id: 1,
       name: "Food Delivery",
-    //  imageSrc: ,
-      techs: "React Js, Redux, Material UI",
-      github: "#",
+      imageSrc: img1,
+      techs: "Laravel",
+      github: "https://github.com/3BoOoD97/pizza-site",
     },
     {
       id: 2,
-      name: "Full Stack Social Media App ",
-     // imageSrc: ,
-      techs: "React Js, Sanity, Tailwind CSS",
-      github: "#",
+      name: "Comprehensive js projects",
+      imageSrc: img2,
+      techs: "JS, CSS, HTML",
+      github: "https://github.com/3BoOoD97/JavaScript_Exercises",
     },
     {
       id: 3,
-      name: "Travel Advisor",
-    //  imageSrc: ,
-      techs: "React Js, Chakra UI, Google API",
-      github: "#",
+      name: "electronics e-store",
+      imageSrc: img3,
+      techs: "React Js,  SCSS, CSS, EJS, JS",
+      github: "https://github.com/3BoOoD97/React-2",
     },
     {
       id: 4,
-      name: "Pintrest UI Clone 2.0 ",
-    //  imageSrc: ,
-      techs: "React Js,  Material UI",
+      name: "portfolio",
+      imageSrc: img4,
+      techs: "React Js, Tailwind CSS, JS, CSS, HTML ",
+      github: "https://github.com/3BoOoD97/3d_portfolio_site",
+    },
+    {
+      id: 5,
+      name: "Whatsapp UI Clone (SOON)",
+      imageSrc: img5,
+      techs: "",
       github: "#",
     },
     {
       id: 5,
-      name: "Own Video Blog",
-    //  imageSrc: ,
-      techs: "React Js, Chara UI, Firebase",
-      github: "#",
-    },
-    {
-      id: 6,
-      name: "Whatsapp UI Clone",
-    //  imageSrc: ,
-      techs: "NextJs, Firebase Auth",
+      name: " Music Player  (SOON)",
+      imageSrc: img6,
+      techs: "Full Stack",
       github: "#",
     },
   ];
@@ -107,7 +95,7 @@ import {
       id: 1,
       iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
       name: "GitHub",
-      link: "#",
+      link: "https://github.com/3BoOoD97?tab=repositories",
     },
     {
       id: 1,
@@ -118,10 +106,10 @@ import {
     {
       id: 1,
       iconSrc: (
-        <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
+        <IoLogoFacebook className="text-blue-500 text-3xl cursor-pointer" />
       ),
-      name: "Twitter",
-      link: "#",
+      name: "Facebook",
+      link: "https://www.facebook.com/abdalrhman.dabour",
     },
     {
       id: 1,
@@ -129,15 +117,14 @@ import {
         <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
       ),
       name: "LinkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/in/abdalrhman-dabour-085219139/",
     },
     {
       id: 1,
       iconSrc: (
-        <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
+        <IoLogoDiscord className="text-purple-500 text-3xl cursor-pointer" />
       ),
-      name: "Whatsapp",
-      link: "#",
+      name: "Discord",
+      link: "https://discordapp.com/users/805579387881652264/",
     },
   ];
-

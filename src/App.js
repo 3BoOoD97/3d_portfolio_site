@@ -1,15 +1,14 @@
-import React, { Component }  from 'react';
 import Spline from '@splinetool/react-spline';
-import './App.css';
-import {IoMenu, IoLogoGithub} from 'react-icons/io5';
-
-import {useState} from 'react';
-import me from './img/me.jpg';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { Experience, Projects, SocialLinks} from "./data";
+import Me from "./images/me.jpg";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { Experience, Projects, SocialLinks } from "./data";
+import { IoLogoGithub, IoMenu } from "react-icons/io5";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { type } from '@testing-library/user-event/dist/type';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +17,7 @@ function App() {
       <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
           <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
-            <p className="text-lg text-slate-200 font-medium">ABOD</p>
+            <p className="text-lg text-slate-200 font-medium">Abdalrhman Dabor</p>
 
             <div className="hidden md:flex items-center gap-6 ml-6 flex-1">
               <a
@@ -46,10 +45,10 @@ function App() {
                 Contact
               </a>
               <a
-                href="#"
+                href="http://www.keepandshare.com/doc30/view.php?id=113561&da=y"
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
               >
-                Download
+                CV
               </a>
             </div>
 
@@ -97,25 +96,23 @@ function App() {
                   Contact
                 </a>
                 <a
-                  href="#"
+                  href="http://www.keepandshare.com/doc30/view.php?id=113561&da=y"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
                   onClick={() => setIsActive(false)}
                 >
-                  Download
+                  CV
                 </a>
               </motion.div>
             )}
           </div>
         </nav>
-
-        <div className="relative" id="home">
+   
+       
         <Spline scene="https://prod.spline.design/0TUuMfCgXS3Xkkuo/scene.splinecode" />
-          <div className="absolute bottom-10 w-full flex justify-center items-center">
-            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
-              <p className="text-white">Press and drag to orbit</p>
-            </div>
           </div>
-        </div>
+
+
+          <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
 
         <main className="w-[80%] mt-4">
           <section
@@ -125,7 +122,7 @@ function App() {
             <div className="w-full h-420 flex items-center justify-center">
               <div className="w-275 h-340 relative bg-emerald-200 rounded-md">
                 <img
-                  src={me}
+                  src={Me}
                   alt=""
                   className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg drop-shadow-2xl"
                 />
@@ -133,21 +130,23 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center ">
               <p className="text-lg text-textBase text-center">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente dicta recusandae commodi praesentium officia, aliquam
-                cumque voluptatem dolor enim ducimus id maiores consequatur
-                dolorem! Architecto aperiam corrupti nostrum eum similique!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis saepe dolor illo. Tenetur labore impedit nihil natus
-                explicabo perspiciatis nisi autem aut numquam dolorum, voluptas
-                vero nobis assumenda commodi magni.
+              My name is Abdalrhman Dabor I am 25 years old. Currently, I live in Sweden. I received my BSc in  Software Technology from Linnéuniversitetet in Sweden and I have 1 year as an IT Technician In my current role at ATEA I am responsible for providing a wide range of services to support, fix, and maintain the hardware and software of an organisation’s computer systems. Including installing, troubleshooting, testing, helping roll out security features, hardware, and software, or maintaining networks and computer systems.
+
+My primary goal is to apply my technical expertise all throughout the full software life cycle to ensure the production and delivery of products and services that meet client specifications. Along with a competent software development team, and strong personal knowledge, skills, and experience in software engineering, I am positive that this goal can be achieved. My experience as a junior software developer enhanced my abilities in designing, implementing, testing, and upgrading software. One of my objectives is to keep updated with the latest IT trends and technologies. I am confident that if given the opportunity, I can be a useful talent to the company.
+
+Please find my resume attached. Feel free to contact me if you have any further questions you would like to discuss.
+
+Thank you for your time ^_^.
               </p>
+
+              <a href="http://www.keepandshare.com/doc30/view.php?id=113561&da=y">
 
               <button class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
                 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Download
+                 CV
                 </span>
               </button>
+              </a>
             </div>
           </section>
 
@@ -239,7 +238,7 @@ function App() {
             </div>
           </section>
         </main>
-      </div>
+        </div>
     </AnimatePresence>
   );
 }

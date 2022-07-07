@@ -1,5 +1,6 @@
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       margin: {
@@ -28,7 +29,7 @@ module.exports = {
       },
       colors: {
         navBar: "#1d1e25",
-        primary: "#000000",
+        primary: "#121316",
         textBase: "#8f9091",
       },
     },

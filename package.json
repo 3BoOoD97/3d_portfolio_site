@@ -1,31 +1,27 @@
 {
-  "name": "3d_portfolio_site",
+  "name": "final",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@splinetool/react-spline": "^2.2.1",
-    "@splinetool/runtime": "^0.9.59",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.8.2",
-    "firebase-tools": "^11.0.1",
-    "framer-motion": "^4.1.17",
-    "postcss-cli": "^9.1.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "@splinetool/runtime": "^0.9.73",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "firebase": "^9.8.4",
+    "framer-motion": "^6.2.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.0",
     "react-vertical-timeline-component": "^3.5.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-css": "postcss src/tailwind.css -o src/App.css",
-    "build-watch": "postcss src/tailwind.css -o src/App.css --watch"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -46,8 +42,8 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.8",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.0.24"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
   }
 }
